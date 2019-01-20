@@ -15,6 +15,9 @@ function contactsReducer(state = [], { type, payload }) {
       const newOrder = arrayMove(...state, payload.oldIndex, payload.newIndex);
       return newOrder;
 
+    case types.EDIT_START_SUCCES:
+      return payload;
+
     case types.EDIT_SUCCESS:
       return state.map(item =>
         item.id === payload ? { ...item, name: item.name } : item,
