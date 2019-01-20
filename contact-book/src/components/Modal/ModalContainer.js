@@ -24,7 +24,11 @@ class modalContainer extends Component {
     return (
       <div className={s.modalContainer}>
         <Button label="Show Modal" onClick={this.handleOpenModal} />
-        <Modal onClose={this.handleCloseModal} isOpen={isModalVisible} />
+        <Modal
+          onClose={this.handleCloseModal}
+          isOpen={isModalVisible}
+          {...this.props}
+        />
       </div>
     );
   }

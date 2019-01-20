@@ -1,6 +1,7 @@
 import React from 'react';
+import { SortableElement } from 'react-sortable-hoc';
 
-const Contact = ({ name, phone, email, onEdit, onDelete }) => (
+const Contact = SortableElement(({ name, phone, email, onEdit, onDelete }) => (
   <div
     style={{
       minWidth: 320,
@@ -30,6 +31,6 @@ const Contact = ({ name, phone, email, onEdit, onDelete }) => (
       <button onClick={onDelete}>Delete</button>
     </footer>
   </div>
-);
+));
 
 export default Contact;

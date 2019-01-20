@@ -3,6 +3,7 @@ import {
   EDIT_SUCCESS,
   DELETE_SUCCESS,
   CHANGE_FILTER,
+  CHANGE_CONTACT_POSITION,
   FETCH_REQUEST,
   FETCH_SUCCESS,
   FETCH_ERROR,
@@ -28,6 +29,13 @@ const editContactSuccess = id => ({
   payload: id,
 });
 
+const changeContactPosition = (contacts, oldIndex, newIndex) => ({
+  type: CHANGE_CONTACT_POSITION,
+  payload: contacts,
+  oldIndex,
+  newIndex,
+});
+
 const fetchRequest = () => ({
   type: FETCH_REQUEST,
 });
@@ -46,6 +54,7 @@ export {
   addContactSuccess,
   editContactSuccess,
   deleteContactSuccess,
+  changeContactPosition,
   filterContact,
   fetchRequest,
   fetchSuccess,

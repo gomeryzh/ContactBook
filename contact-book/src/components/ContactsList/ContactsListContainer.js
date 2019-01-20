@@ -27,6 +27,7 @@ const mapDispatch = {
   fetchContacts,
   addContact,
   deleteContact,
+  editContact,
 };
 
 export default connect(
