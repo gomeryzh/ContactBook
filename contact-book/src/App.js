@@ -1,13 +1,16 @@
 import React, { lazy } from 'react';
 import ContactsList from './components/ContactsList/ContactsListContainer';
 import AppHeader from './components/AppHeader/AppHeader';
-import ContactEditor from './components/ContactEditor/ContactEditor';
+import ContactEditor from './components/ContactEditor/ContactEditorContainer';
+import Modal from './components/Modal/ModalContainer';
 
 const App = () => (
   <>
     <AppHeader />
+
     <ContactEditor />
     <ContactsList />
+    <Modal />
   </>
 );
 

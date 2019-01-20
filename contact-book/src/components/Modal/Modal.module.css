@@ -1,0 +1,60 @@
+.Modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 400px;
+  padding: 16px;
+  background-color: #fff;
+}
+
+.BackdropEnter {
+  opacity: 1;
+}
+
+.BackdropExit {
+  opacity: 0;
+}
+
+.ModalEnter {
+  animation: open-modal 0.4s linear forwards;
+}
+
+.ModalExit {
+  animation: close-modal 0.3s linear forwards;
+}
+
+@keyframes open-modal {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes close-modal {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}

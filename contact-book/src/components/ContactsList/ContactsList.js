@@ -1,7 +1,7 @@
 import React from 'react';
 import Contact from '../Contact/Contact';
 
-const ContactsList = ({ contacts = [], editContact }) => (
+const ContactsList = ({ contacts = [], editContact, deleteContact }) => (
   <div
     style={{
       display: 'flex',
@@ -17,6 +17,7 @@ const ContactsList = ({ contacts = [], editContact }) => (
       <Contact
         key={contact.id}
         {...contact}
+        onDelete={() => deleteContact(contact.id)}
         onEdit={() => editContact(contact.id)}
       />
     ))}

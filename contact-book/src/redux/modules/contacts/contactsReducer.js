@@ -7,6 +7,8 @@ function contactsReducer(state = [], { type, payload }) {
       return payload;
     case types.ADD_SUCCESS:
       return [...state, payload];
+    case types.DELETE_SUCCESS:
+      return state.filter(item => item.id !== payload);
 
     case types.EDIT_SUCCESS:
     // return state.map(item =>

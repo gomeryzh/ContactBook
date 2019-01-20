@@ -1,6 +1,7 @@
 import {
   ADD_SUCCESS,
   EDIT_SUCCESS,
+  DELETE_SUCCESS,
   CHANGE_FILTER,
   FETCH_REQUEST,
   FETCH_SUCCESS,
@@ -15,6 +16,11 @@ const filterContact = filter => ({
 const addContactSuccess = contact => ({
   type: ADD_SUCCESS,
   payload: contact,
+});
+
+const deleteContactSuccess = id => ({
+  type: DELETE_SUCCESS,
+  payload: id,
 });
 
 const editContactSuccess = id => ({
@@ -39,6 +45,7 @@ const fetchError = error => ({
 export {
   addContactSuccess,
   editContactSuccess,
+  deleteContactSuccess,
   filterContact,
   fetchRequest,
   fetchSuccess,

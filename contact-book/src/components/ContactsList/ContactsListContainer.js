@@ -5,6 +5,7 @@ import { filteredContacts } from '../../redux/modules/contacts/contactsSelector'
 import {
   fetchContacts,
   addContact,
+  deleteContact,
   editContact,
 } from '../../redux/modules/contacts/contactsOperations';
 
@@ -25,7 +26,7 @@ const mapState = state => ({
 const mapDispatch = {
   fetchContacts,
   addContact,
-  editContact,
+  deleteContact,
 };
 
 export default connect(
