@@ -3,7 +3,7 @@ import Contact from '../Contact/Contact';
 import { SortableContainer } from 'react-sortable-hoc';
 
 const ContactsList = SortableContainer(
-  ({ contacts = [], editContact, deleteContact }) => (
+  ({ contacts = [], editContactStart, deleteContact }) => (
     <div
       style={{
         display: 'flex',
@@ -20,7 +20,7 @@ const ContactsList = SortableContainer(
           key={`contact-${index}`}
           {...contact}
           onDelete={() => deleteContact(contact.id)}
-          onEdit={() => editContact(contact.id)}
+          onEdit={() => editContactStart(contact.id)}
         />
       ))}
     </div>

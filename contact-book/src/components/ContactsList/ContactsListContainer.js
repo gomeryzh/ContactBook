@@ -7,6 +7,7 @@ import {
   addContact,
   deleteContact,
   editContact,
+  editContactStart,
 } from '../../redux/modules/contacts/contactsOperations';
 
 class ContactsListContainer extends Component {
@@ -28,6 +29,7 @@ const mapDispatch = {
   addContact,
   deleteContact,
   editContact,
+  editContactStart,
 };
 
 export default connect(

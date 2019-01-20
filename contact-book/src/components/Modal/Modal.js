@@ -89,9 +89,11 @@ export default class Modal extends Component {
                   value={this.state.email}
                   onChange={this.handleChange}
                 />
+                <footer>
+                  <button type="submit">Add Contact</button>
 
-                <button type="submit">Add Contact</button>
-                <Button label="Close" onClick={onClose} />
+                  <Button label="Close" onClick={onClose} />
+                </footer>
               </form>
             </CSSTransition>
           </Backdrop>

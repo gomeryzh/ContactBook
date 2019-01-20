@@ -5,6 +5,7 @@ import {
   fetchError,
   addContactSuccess,
   deleteContactSuccess,
+  editContactStartSuccess,
   editContactSuccess,
 } from './contactsActions';
 
@@ -40,6 +41,17 @@ export const deleteContact = id => async dispatch => {
   try {
     await axios.delete(`http://localhost:3006/contacts/${id}`);
     dispatch(deleteContactSuccess(id));
+  } catch (error) {
+    dispatch(fetchError(error));
+  }
+};
+
+export const editContactStart = id => async dispatch => {
+  dispatch(fetchRequest());
+
+  try {
+    axios.get(`http://localhost:3006/contacts/${id}`);
+    dispatch(editContactStartSuccess(id));
   } catch (error) {
     dispatch(fetchError(error));
   }

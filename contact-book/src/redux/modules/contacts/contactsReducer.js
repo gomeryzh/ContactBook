@@ -16,9 +16,9 @@ function contactsReducer(state = [], { type, payload }) {
       return newOrder;
 
     case types.EDIT_SUCCESS:
-    // return state.map(item =>
-    //   item.id === payload ? { ...item, completed: !item.completed } : item,
-    // );
+      return state.map(item =>
+        item.id === payload ? { ...item, name: item.name } : item,
+      );
     default:
       return state;
   }
