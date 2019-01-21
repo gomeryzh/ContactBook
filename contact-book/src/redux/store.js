@@ -9,9 +9,7 @@
 // const middleWare = applyMiddleware(logger, thunk);
 // const enhancer = composeWithDevTools(middleWare);
 
-// const store = createStore(rootModule, enhancer);
-
-// export default store;
+// export const store = createStore(rootModule, enhancer);
 
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -34,8 +32,6 @@ const pReducer = persistReducer(persistConfig, rootModule);
 const logger = createLogger();
 const middleWare = applyMiddleware(logger, thunk);
 const enhancer = composeWithDevTools(middleWare);
-
-// const store = createStore(rootModule, enhancer);
 
 export const store = createStore(pReducer, enhancer);
 export const persistor = persistStore(store);

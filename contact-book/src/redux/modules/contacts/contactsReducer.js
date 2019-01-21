@@ -11,9 +11,10 @@ function contactsReducer(state = [], { type, payload }) {
     case types.DELETE_SUCCESS:
       return state.filter(item => item.id !== payload);
 
-    case types.CHANGE_CONTACT_POSITION:
-      const newOrder = arrayMove(...state, payload.oldIndex, payload.newIndex);
-      return newOrder;
+    case types.SET_NEW_ORDER:
+      return payload;
+    // const newOrder = arrayMove(...state, payload.oldIndex, payload.newIndex);
+    // return newOrder;
 
     case types.EDIT_START_SUCCES:
       return payload;

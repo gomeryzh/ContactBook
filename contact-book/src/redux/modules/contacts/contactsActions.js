@@ -8,6 +8,7 @@ import {
   FETCH_REQUEST,
   FETCH_SUCCESS,
   FETCH_ERROR,
+  SET_NEW_ORDER,
 } from './contactsActionsTypes';
 
 const filterContact = filter => ({
@@ -35,10 +36,14 @@ const editContactSuccess = payload => ({
   payload,
 });
 
-const changeContactPosition = (contacts, oldIndex, newIndex) => ({
+const changeContactPosition = ({ oldIndex, newIndex }) => ({
   type: CHANGE_CONTACT_POSITION,
-  payload: contacts,
-  oldIndex,
+  payload: { oldIndex, newIndex },
+});
+
+const setNewOrder = (oldIndex, newIndex) => ({
+  type: SET_NEW_ORDER,
+  payload: oldIndex,
   newIndex,
 });
 
@@ -66,4 +71,5 @@ export {
   fetchRequest,
   fetchSuccess,
   fetchError,
+  setNewOrder,
 };
