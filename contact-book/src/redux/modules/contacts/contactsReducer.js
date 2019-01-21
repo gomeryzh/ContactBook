@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import { arrayMove } from 'react-sortable-hoc';
 import * as types from './contactsActionsTypes';
 
 function contactsReducer(state = [], { type, payload }) {
@@ -13,8 +12,6 @@ function contactsReducer(state = [], { type, payload }) {
 
     case types.SET_NEW_ORDER:
       return payload;
-    // const newOrder = arrayMove(...state, payload.oldIndex, payload.newIndex);
-    // return newOrder;
 
     case types.EDIT_START_SUCCES:
       return payload;

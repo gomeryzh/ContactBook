@@ -66,7 +66,7 @@ export default class Modal extends Component {
                 }}
               >
                 <input
-                  style={{ width: '50%', margin: 'auto' }}
+                  className={s.input}
                   type="text"
                   placeholder="Name"
                   name="name"
@@ -74,23 +74,29 @@ export default class Modal extends Component {
                   onChange={this.handleChange}
                 />
                 <input
-                  style={{ width: '50%', margin: 'auto' }}
+                  className={s.input}
                   type="text"
                   placeholder="Phone"
                   name="phone"
                   value={this.state.phone}
                   onChange={this.handleChange}
                 />
+
                 <input
-                  style={{ width: '50%', margin: 'auto' }}
+                  className={s.input}
                   type="text"
                   placeholder="Email"
                   name="email"
                   value={this.state.email}
                   onChange={this.handleChange}
                 />
-                <footer>
-                  <button type="submit">Add Contact</button>
+
+                <span class="border" />
+
+                <footer className={s.footer}>
+                  <button type="submit" className={s.button}>
+                    Add Contact
+                  </button>
 
                   <Button label="Close" onClick={onClose} />
                 </footer>

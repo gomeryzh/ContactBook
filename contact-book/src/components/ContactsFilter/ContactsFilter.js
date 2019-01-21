@@ -1,22 +1,13 @@
 import React from 'react';
+import * as s from './ContactsFilter.module.css';
 
 const ContactsFilter = ({ value = '', onChange = () => null }) => (
   <input
+    className={s.input}
     value={value}
     onChange={e => onChange(e.target.value)}
     type="text"
     placeholder="Search..."
-    style={{
-      marginLeft: 4,
-      marginRight: 4,
-      backgroundColor: 'rgba(255, 255, 255, 0.15)',
-      width: 250,
-      font: 'inherit',
-      border: '1px solid #212121',
-      cursor: 'text',
-      padding: 8,
-      outline: 'none',
-    }}
   />
 );
 
